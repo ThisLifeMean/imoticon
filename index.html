@@ -8,22 +8,19 @@
     <body>
         
         
-        
-        
         <section class="section">
-            <h2 class="subtitle">하트시그널 닮은꼴 테스트(남자)</h2>
+            <h2 class="subtitle">AI 이모티콘 닮은꼴 테스트</h2>
             <br>
             <br>
-            <h3 class="subtitle"> 나와 닮은 하트시그널 출연자는 누구일까?</h3>
+            <h3 class="subtitle">나랑 닮은 이모티콘이 있을까?</h3>
+            <a href="heart.ico"></a>
             <p class="subtitle">
-                본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
+                본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.<br>(제작도움 조코딩 유튜브)
             </p>
             <br>
             <br>
             <br>
         </section>
-
-        
         
         
          <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -43,7 +40,7 @@
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <p class="text-center">AI가 당신의 동물상을 분석중입니다.</p>
+                <p class="text-center">AI가 당신의 이모티콘을 분석중입니다.</p>
             </div>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
             <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
@@ -61,7 +58,8 @@
             </div>
         </div>
     </div>
-        
+    <br>
+    <!-- <a class="img" href='htttps://.pngtree.com/so/심장-클립-아트'>심장 클립 아트 png에서 pngtree.com</a> -->
         <script>
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -150,7 +148,7 @@
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
             // the link to your model provided by Teachable Machine export panel
-            const URL = 'https://teachablemachine.withgoogle.com/models/v3OuA9Am0/';
+            const URL = 'https://teachablemachine.withgoogle.com/models/zR3GJfsWZ/';
 
             let model, labelContainer, maxPredictions;
 
@@ -183,40 +181,52 @@
                 // console.log(prediction[0].className);
                 var resultMessage;
                 switch (prediction[0].className) {
-                    case "김강열":
-                        resultMessage = "김강열"
+                    case "옴팡이":
+                        resultMessage = "옴팡이"
                         break;
-                    case "천인우":
-                        resultMessage = "천인우"
+                    case "파댕이":
+                        resultMessage = "파댕이"
                         break;
-                    case "김도균":
-                        resultMessage = "김도균"
+                    case "치즈덕":
+                        resultMessage = "치즈덕"
                         break;
-                    case "이규빈":
-                        resultMessage = "이규빈"
+                    case "오버액션토끼":
+                        resultMessage = "오버액션토끼"
                         break;
-                    case "김현우":
-                        resultMessage = "김현우"
+                    case "늬애시":
+                        resultMessage = "늬애시"
                         break;
-                    case "임한결":
-                        resultMessage = "임한결"
+                    case "오구":
+                        resultMessage = "오구"
                         break;
-                    case "정의동":
-                        resultMessage = "정의동"
+                    case "익명이":
+                        resultMessage = "익명이"
                         break;
-                    case "정재호":
-                        resultMessage = "정재호"
+                    case "동그리":
+                        resultMessage = "동그리"
+                        break;
+                    case "다람이":
+                        resultMessage = "다람이"
+                        break;
+                    case "오니기리":
+                        resultMessage = "오니기리"
+                        break;
+                    case "슈야":
+                        resultMessage = "슈야"
                         break;
                     default:
                         resultMessage = "알 수 없음"
                 }
                 // console.log(resultMessage)
-                $('.result-message').html(resultMessage);
-                for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
-                }
+                $('.result-message').html(resultMessage);      
+                    
+                    
+                // for (let i = 0; i < maxPredictions; i++) {
+                // const classPrediction =
+                // prediction[i].className + ": " + prediction[i].probability.toFixed(2)*100 + "%";
+                // labelContainer.childNodes[i].innerHTML = classPrediction;
+                // }
+                
             }
         </script>
     </body>
