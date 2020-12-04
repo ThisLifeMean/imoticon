@@ -1,2 +1,3 @@
 User-agent: *
 Allow:/
+Sitemap: https://hungry-archimedes-deaf1f.netlify.app/sitemap.xml
