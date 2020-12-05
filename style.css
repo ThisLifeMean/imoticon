@@ -98,6 +98,7 @@ body {
 
 #face-image {
  border: 11px solid black;
+ border-radius: 3px;
 }
 
 .try-again-btn {
