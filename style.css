@@ -96,6 +96,10 @@ body {
   padding: 10px;
 }
 
+#face-image {
+ border: 11px solid black;
+}
+
 .try-again-btn {
   border-radius: 40px;
   border: solid 1.5px #35465d;
@@ -334,7 +338,19 @@ body {
     margin: 0 auto;
 }
 .result-message {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    display: inline-block;
+    width: auto;
+    height: $height;
+    line-height: 50px;
+    text-align: center;
+    background: orange;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
