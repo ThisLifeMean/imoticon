@@ -338,6 +338,13 @@ body {
     width: 80%;
     margin: 0 auto;
 }
+
+.result-image {
+    max-height: 60%;
+    max-width: 60%;
+    margin: auto;
+    padding: 10px;
+}
 .result-message {
     font-size: 1.4rem;
     border-radius: 3px;
@@ -353,7 +360,6 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-
 
 .animal-explain {
     font-size: 1.5rem;
