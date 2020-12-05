@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>AI 이모티콘 닮은꼴 테스트</title>
+        <link rel="short icon" href="/workspace/LSM/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/workspace/LSM/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css" />
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <script
@@ -18,7 +20,7 @@
             <h2 class="subtitle">AI 이모티콘 닮은꼴 테스트</h2>
             <br />
             <br />
-            <h3 class="subtitle">나랑 닮은 이모티콘이 있을까?</h3>
+            <h3 class="subtitle">나와 닮은 이모티콘을 찾고 클릭해서 구매까지!</h3>
             <a href="heart.ico"></a>
             <p class="subtitle">
                 본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.<br />(제작도움
@@ -51,8 +53,19 @@
             <div class="file-upload-content">
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                 
-                <p class="result-message"></p>
-                <!-- <img src="resultImg" class="result-image"> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <img class="result-image" src="" alt="로딩중입니다 조금만 기다려주세요!">
+            <br>
+            <br>
+            <a class="result-message" href=""></a>
+            <br>
+            <br>
+               
                 
                 <div id="label-container"></div>
                 <br />
@@ -198,48 +211,74 @@
                 // console.log(prediction[0].className);
                 var resultMessage;
                 var resultImg;
+                var resultShop;
                 switch (prediction[0].className) {
                     case '옴팡이':
                         resultMessage = '옴팡이';
+                        resultImg = 'ompang.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%98%B4%ED%8C%A1%EC%9D%B4';
                         break;
                     case '파댕이':
                         resultMessage = '파댕이';
+                        resultImg = 'padang.png';
+                        resultShop = 'https://e.kakao.com/search?q=%ED%8C%8C%EB%8C%95%EC%9D%B4';
                         break;
                     case '치즈덕':
                         resultMessage = '치즈덕';
+                        resultImg = 'cheese.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%B9%98%EC%A6%88%EB%8D%95';
                         break;
                     case '오버액션토끼':
                         resultMessage = '오버액션토끼';
+                        resultImg = 'overrabbit.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EB%B2%84%EC%95%A1%EC%85%98%ED%86%A0%EB%81%BC';
                         break;
                     case '늬애시':
                         resultMessage = '늬애시';
+                        resultImg = 'nasi.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EB%8A%AC%EC%95%A0%EC%8B%9C';
                         break;
                     case '오구':
                         resultMessage = '오구';
+                        resultImg = 'ogu.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EA%B5%AC';
                         break;
                     case '익명이':
                         resultMessage = '익명이';
+                        resultImg = 'anony.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%9D%B5%EB%AA%85%EC%9D%B4';
                         break;
                     case '동그리':
                         resultMessage = '동그리';
+                        resultImg = 'dongle.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EB%8F%99%EA%B7%B8%EB%A6%AC';
                         break;
                     case '다람이':
                         resultMessage = '다람이';
+                        resultImg = 'daram.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EB%8B%A4%EB%9E%8C%EC%9D%B4';
                         break;
                     case '오니기리':
                         resultMessage = '오니기리';
-                        // resultImg = 'oni.png';
+                        resultImg = 'oni.png';
+                        resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EB%8B%88%EA%B8%B0%EB%A6%AC';
                         break;
                     case '슈야':
                         resultMessage = '슈야';
+                        resultImg = 'sewya.png';
+                        resultShop ='https://e.kakao.com/search?q=%EC%8A%88%EC%95%BC';
                         break;
                     default:
                         resultMessage = '알 수 없음';
                 }
                 // console.log(resultMessage)
+                
                 $('.result-message').html(resultMessage);
-                // $(".result-image").attr("src", "resultImg");
-
+                $(".result-message").attr('href', resultShop);
+                $(".result-image").attr('src', resultImg);
+                
+                // document.getElementByClass('result-img').src=resultImg
+                // $('.result-img').html(<img src=resultImg>);
                 // for (let i = 0; i < maxPredictions; i++) {
                 // const classPrediction =
                 // prediction[i].className + ": " + prediction[i].probability.toFixed(2)*100 + "%";
