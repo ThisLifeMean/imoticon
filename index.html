@@ -11,7 +11,7 @@
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fbf8951c0182a12"
         ></script>
         <meta name="google-site-verification" content="wOhoEgiWdmkIIFybYhGCuVzHtKXYPnbhgUUPE0NqdaE" />
-        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;/> 
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0";/> 
         <meta name="naver-site-verification" content="9dcf3c7ba9dc070dd40b1e838e4fe71ab5fe100e" />
         <meta name="description" content="사진을 업로드하면 AI기술로 닮은 이모티콘을 찾아주는 테스트입니다" />
         <meta name="keywords" content="이모티콘 테스트, 이모티콘, 닮은 이모티콘, 이모티콘 추천, 카카오톡 이모티콘, 옴팡이, 오니기리. 파댕이, 슈야, 익명이, 동그리, 다람이, 늬애시 " />
@@ -56,15 +56,20 @@
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                 
             <br>
-            <br>
-            <br>
-            <br>
             
+            <!-- 이모티콘 회사에 문의 -->
+            <!-- <img class="result-image" src="" alt="로딩중!!"> -->
+                
+            <br>
+            <br>
+                
+            <div class="resultContainer">
+                    <span class="result-message"></span>
+                    <a class="result-shop" href="" >
+                        <img class="shop-image" src="img/shop.png" alt="상점"/>
+                    </a>
+            </div>
             
-            <img class="result-image" src="" alt="로딩중!!">
-            <br>
-            <br>
-            <a class="result-message" href=""></a>
             <br>
             <br>
                
@@ -77,9 +82,6 @@
                     </div>
                     <p class="text-center">AI가 당신의 이모티콘을 분석중입니다.</p>
                 </div>
-                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
-                <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
-
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox"></div>
                 <br />
@@ -212,62 +214,62 @@
                 // console.log(prediction)
                 // console.log(prediction[0].className);
                 var resultMessage;
-                var resultImg;
+                // var resultImg;
                 var resultShop;
                 switch (prediction[0].className) {
                     case '옴팡이':
                         resultMessage = '옴팡이';
-                        resultImg = 'ompang.png';
+                        // resultImg = 'ompang.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%98%B4%ED%8C%A1%EC%9D%B4';
                         break;
                     case '파댕이':
                         resultMessage = '파댕이';
-                        resultImg = 'padang.png';
+                        // resultImg = 'padang.png';
                         resultShop = 'https://e.kakao.com/search?q=%ED%8C%8C%EB%8C%95%EC%9D%B4';
                         break;
                     case '치즈덕':
                         resultMessage = '치즈덕';
-                        resultImg = 'cheese.png';
+                        // resultImg = 'cheese.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%B9%98%EC%A6%88%EB%8D%95';
                         break;
                     case '오버액션토끼':
                         resultMessage = '오버액션토끼';
-                        resultImg = 'overrabbit.png';
+                        // resultImg = 'overrabbit.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EB%B2%84%EC%95%A1%EC%85%98%ED%86%A0%EB%81%BC';
                         break;
                     case '늬애시':
                         resultMessage = '늬애시';
-                        resultImg = 'nasi.png';
+                        // resultImg = 'nasi.png';
                         resultShop = 'https://e.kakao.com/search?q=%EB%8A%AC%EC%95%A0%EC%8B%9C';
                         break;
                     case '오구':
                         resultMessage = '오구';
-                        resultImg = 'ogu.png';
+                        // resultImg = 'ogu.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EA%B5%AC';
                         break;
                     case '익명이':
                         resultMessage = '익명이';
-                        resultImg = 'anony.png';
+                        // resultImg = 'anony.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%9D%B5%EB%AA%85%EC%9D%B4';
                         break;
                     case '동그리':
                         resultMessage = '동그리';
-                        resultImg = 'dongle.png';
+                        // resultImg = 'dongle.png';
                         resultShop = 'https://e.kakao.com/search?q=%EB%8F%99%EA%B7%B8%EB%A6%AC';
                         break;
                     case '다람이':
                         resultMessage = '다람이';
-                        resultImg = 'daram.png';
+                        // resultImg = 'daram.png';
                         resultShop = 'https://e.kakao.com/search?q=%EB%8B%A4%EB%9E%8C%EC%9D%B4';
                         break;
                     case '오니기리':
                         resultMessage = '오니기리';
-                        resultImg = 'oni.png';
+                        // resultImg = 'oni.png';
                         resultShop = 'https://e.kakao.com/search?q=%EC%98%A4%EB%8B%88%EA%B8%B0%EB%A6%AC';
                         break;
                     case '슈야':
                         resultMessage = '슈야';
-                        resultImg = 'sewya.png';
+                        // resultImg = 'sewya.png';
                         resultShop ='https://e.kakao.com/search?q=%EC%8A%88%EC%95%BC';
                         break;
                     default:
@@ -276,18 +278,20 @@
                 // console.log(resultMessage)
                 
                 $('.result-message').html(resultMessage);
-                $(".result-message").attr('href', resultShop);
-                $(".result-image").attr('src', resultImg);
+                $(".result-shop").attr('href', resultShop);
+                // $(".result-image").attr('src', resultImg);
                 
-                // document.getElementByClass('result-img').src=resultImg
-                // $('.result-img').html(<img src=resultImg>);
-                // for (let i = 0; i < maxPredictions; i++) {
-                // const classPrediction =
-                // prediction[i].className + ": " + prediction[i].probability.toFixed(2)*100 + "%";
-                // labelContainer.childNodes[i].innerHTML = classPrediction;
-                // }
-            }
-        </script>
+                /* 이미지 유사도 구현
+                document.getElementByClass('result-img').src=resultImg
+                $('.result-img').html(<img src=resultImg>);
+                for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                prediction[i].className + ": " + prediction[i].probability.toFixed(2)*100 + "%";
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+                }*/
+                }
+                
+     </script>
     </body>
     <div class='ad-banner'>
         <ins class="kakao_ad_area" style="display:none;" 
@@ -300,20 +304,13 @@
     <!-- 
 image input box
 Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 gender toggle
 Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
 </html>
